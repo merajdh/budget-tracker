@@ -1,3 +1,166 @@
+:root {
+  /* FONTS */
+  --font-base: "Inter", sans-serif;
+
+  /* COLORS */
+  --color-bg: #f5f5f5;
+  --color-secondary: #775da6;
+  --color-secondary-hover: #8e73cb;
+  --color-heading: #141414;
+  --color-paragraph: #6d7d93;
+  --color-bg-darker: #ffffff;
+  --color-shadow: #30303117;
+  --color-shadow-hove: #30303136;
+  --color-onSecondary: #f5f5f5;
+
+  /* PADDINGS */
+  --padding-sm: 1rem 2rem;
+  --padding-md: 1.2rem 2.5rem;
+  --padding-lg: 1.2rem 4rem;
+
+  /* FONT SIZE */
+  --font-sm: 1.4rem;
+  --font-md: 1.6rem;
+  --font-lg: 1.8rem;
+  --font-bl: 2.2rem;
+
+  /* FONT WEIGHT */
+  --weight-thin: 400;
+  --weight-normal: 500;
+  --weight-bold: 800;
+}
+
+[data-theme="dark"] {
+  --color-bg: #111111;
+  --color-main: #030303;
+  --color-secondary: #775da6;
+  --color-secondary-hover: #9e84ec;
+  --color-heading: #ffffff;
+  --color-paragraph: #6d7d93;
+  --color-bg-darker: #1c1d24;
+}
+
 html {
-  margin: 0;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 1rem;
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  transition: background-color 0.2s ease-in, color 0.3s ease;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+h1 {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-size: var(--font-bl);
+  font-weight: var(--weight-bold);
+}
+h2 {
+  color: var(--color-heading);
+  font-size: var(--font-bl);
+  font-weight: var(--weight-bold);
+}
+
+h3,
+h4,
+h5 {
+  font-size: var(--font-lg);
+  color: var(--color-paragraph);
+}
+p {
+  font-size: var(--font-md);
+  font-weight: var(--weight-normal);
+  line-height: 1.6;
+  color: var(--color-paragraph);
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --font-sm: 1.2rem;
+    --font-md: 1.4rem;
+    --font-lg: 1.6rem;
+    --font-bl: 1.8rem;
+  }
+}
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: clamp(0.5rem, 10%, 1rem);
+}
+
+.btn--secondy {
+  background-color: var(--color-secondary);
+  color: var(--color-onSecondary);
+}
+.btn--dark {
+  background-color: var(--color-bg);
+}
+.btn--light {
+  background-color: var(--color-bg-darker);
+  box-shadow: none;
+  border: 1px solid var(--color-shadow);
+}
+
+.btn--sm {
+  font-size: var(--font-sm);
+  padding: var(--padding-sm);
+  font-weight: var(--weight-sm);
+}
+.btn--md {
+  font-size: var(--font-md);
+  padding: var(--padding-md);
+  font-weight: var(--weight-md);
+}
+.btn--lg {
+  font-size: var(--font-lg);
+  padding: var(--padding-lg);
+  font-weight: var(--weight-md);
+}
+
+.btn-label {
+  color: var(--color-heading);
+  max-lines: 1;
+  font-weight: var(--weight-bold);
+}
+
+.btn-lable--reverse {
+  color: white;
+}
+
+/* toggle theme */
+#theme {
+  transition: all 100ms ease;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--color-bg-darker);
+  box-shadow: 0px 4px 4px var(--color-shadow);
+  border-radius: clamp(1rem, 10%, 1.5rem);
+  padding: var(--padding-md);
+  width: fit-content;
+  margin: var(--padding-md);
+}
+
+/* CARD TRANSACTIONS */
+.card-transactions--earning {
+  background-color: var(--color-secondary);
+  color: var(--color-onSecondary);
+}
+.card-transactions--earning * {
+  color: inherit;
+}
+.card-transactions__title {
+  font-weight: var(--weight-thin);
+  font-size: var(--font-md);
+  color: var(--color-paragraph);
 }

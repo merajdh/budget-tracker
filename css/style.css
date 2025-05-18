@@ -45,7 +45,6 @@ html {
 }
 
 body {
-  margin: 1rem;
   font-family: var(--font-base);
   background-color: var(--color-bg);
   transition: background-color 0.2s ease-in, color 0.3s ease;
@@ -72,10 +71,13 @@ h2 {
 h3,
 h4,
 h5 {
+  margin: 0;
   font-size: var(--font-lg);
   color: var(--color-paragraph);
 }
 p {
+  margin: 0;
+
   font-size: var(--font-md);
   font-weight: var(--weight-normal);
   line-height: 1.6;
@@ -163,4 +165,69 @@ p {
   font-weight: var(--weight-thin);
   font-size: var(--font-md);
   color: var(--color-paragraph);
+}
+.card-bank-card {
+  background-color: var(--color-secondary);
+  padding: var(--padding-sm);
+  margin: 0 auto;
+}
+
+.card-bank-card * {
+  color: var(--color-onSecondary) !important;
+}
+.card__serial {
+  margin: 0.8rem 0 0.8rem 0;
+}
+
+.card__chip-holder {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.card__cvv {
+}
+.card__bank {
+  align-self: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+.flex__row {
+  flex-direction: row;
+}
+.flex__column {
+  flex-direction: column;
+}
+
+/* BADGES  */
+.badge {
+  display: inline-block;
+  min-height: max-content;
+  border-radius: 6px;
+  background-color: var(--color-bg-darker);
+  box-shadow: none;
+  padding: 0.5rem;
+}
+
+/* ICONS */
+.icon {
+  display: inline-block;
+  color: var(--color-paragraph);
+}
+
+.icon--sm,
+.icon--sm::before {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--md,
+.icon--md::before {
+  width: 22px;
+  height: 22px;
+}
+.icon--lg,
+.icon--lg::before {
+  width: 28px;
+  height: 28px;
 }

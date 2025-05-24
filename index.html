@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="iconoir-sun-light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
@@ -21,14 +22,73 @@
     <title>dino cash - track your finance</title>
   </head>
   <body>
+    <div class="blurry-balls">
+      <div class="ball ball-1"></div>
+      <div class="ball ball-2"></div>
+    </div>
     <header>
-      <div class="toggle-theme">
-        <button class="btn btn--sm btn--secondy" id="theme">
-          <span>T</span>
-        </button>
-      </div>
+      <nav class="navbar grid grid--1x2">
+        <div class="toggle-theme navbar__items navbar__left flex">
+          <img
+            class="navbar__brand"
+            src="/images/dino-cash-logo.png"
+            id="theme__icon"
+          />
+        </div>
+
+        <div class="navbar__items navbar__middle flex">
+          <i class="navbar__toggler icon--md badge__icon iconoir-menu"></i>
+
+          <div class="nav__menu hidden">
+            <button
+              class="navbar__item navbar__dashboard btn btn--md btn--dark"
+            >
+              <span class="btn-label">Dashboard</span>
+            </button>
+
+            <button class="navbar__item navbar__setting btn btn--md btn--light">
+              <span class="btn-label">Setting</span>
+            </button>
+
+            <button class="navbar__item navbar__wallet btn btn--md btn--dark">
+              <span class="btn-label">Wallet</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar__items navbar__right flex">
+          <span class="navbar__search badge badge--free flex flex__row">
+            <i
+              class="icon icon--md icon--heading badge__icon iconoir-search"
+            ></i>
+            <p class="navbar__search-title">search for your transaction...</p>
+          </span>
+          <span class="badge">
+            <i
+              class="icon icon--md icon--heading badge__icon iconoir-megaphone"
+            ></i>
+          </span>
+
+          <img class="navbar__avatar" src="/images/avatar.jpg" />
+        </div>
+      </nav>
     </header>
     <aside class="sidebar"></aside>
-    <main class="main"></main>
+    <main class="main">
+      <div class="card card-transactions">
+        <h2 class="card-transactions__title">Total Spending</h2>
+        <h3 class="card-transactions__amount">$ 48,670</h3>
+        <div class="card-transactions__exceeds">
+          <p><strong>6$</strong> Increase From Target</p>
+        </div>
+      </div>
+      <div class="card card-transactions--earning">
+        <h1 class="card-transactions__title">Total Earning</h1>
+        <h3 class="card-transactions__amount">$ 48,670</h3>
+        <p class="card-transactions__exceeds">
+          <strong>6$</strong> Increase From Target
+        </p>
+      </div>
+    </main>
   </body>
 </html>

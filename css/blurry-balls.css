@@ -1,0 +1,64 @@
+/* CSS */
+.blurry-balls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep behind content */
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Creates the blur effect */
+  opacity: 0.2; /* Adjust transparency */
+}
+
+/* Individual ball styling */
+.ball-1 {
+  background: radial-gradient(circle at 50% 50%, #8e73cb, #775da6);
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  right: -20%;
+}
+
+.ball-2 {
+  background: radial-gradient(circle at 50% 50%, #8e73cb, #775da6);
+  width: 300px;
+  height: 300px;
+  top: -30%;
+  left: -10%;
+}
+
+/* Optional animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.ball {
+  animation: float 8s ease-in-out infinite;
+}
+
+.ball-1 {
+  animation-delay: 1s;
+}
+.ball-2 {
+  animation-delay: 2s;
+}
+
+@media screen and (min-width: 768px) {
+  .ball-1,
+  .ball-2 {
+    width: 600px;
+    height: 600px;
+  }
+}
